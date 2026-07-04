@@ -1,0 +1,284 @@
+.root {
+    -fx-font-family: "Segoe UI";
+}
+
+.app-shell {
+    -fx-background-color: linear-gradient(to bottom right, #f7f9ff, #eef2fb 60%, #eaf6f4);
+}
+
+.app-shell.dark {
+    -fx-background-color: linear-gradient(to bottom right, #111827, #182032 60%, #0f2b2a);
+}
+
+.sidebar-panel {
+    -fx-background-color: linear-gradient(to bottom, #113d62, #1c6a87, #2f8f8f);
+    -fx-background-radius: 24;
+    -fx-effect: dropshadow(gaussian, rgba(15, 41, 66, 0.28), 22, 0.18, 0, 10);
+}
+
+.content-wrap {
+    -fx-background-color: transparent;
+}
+
+.content-card, .metric-card, .result-card, .category-card {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-border-color: rgba(17, 61, 98, 0.08);
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(16, 24, 40, 0.08), 18, 0.14, 0, 10);
+}
+
+.dark .content-card,
+.dark .metric-card,
+.dark .result-card,
+.dark .category-card {
+    -fx-background-color: rgba(17, 24, 39, 0.92);
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+}
+
+.result-card {
+    -fx-background-color: rgba(255, 255, 255, 0.82);
+}
+
+.dark .result-card {
+    -fx-background-color: rgba(17, 24, 39, 0.8);
+}
+
+.brand-title, .brand-mini, .hero-text, .section-title, .metric-number, .score-title, .muted-label, .label {
+    -fx-text-fill: #132238;
+}
+
+.sidebar-panel .brand-title,
+.sidebar-panel .hero-text,
+.sidebar-panel .muted-label {
+    -fx-text-fill: white;
+}
+
+.dark .brand-mini,
+.dark .section-title,
+.dark .metric-number,
+.dark .score-title,
+.dark .hero-text,
+.dark .muted-label,
+.dark .label,
+.dark .text-area,
+.dark .radio-button,
+.dark .table-view {
+    -fx-text-fill: #eef2ff;
+}
+
+.brand-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+}
+
+.profile-avatar-shell {
+    -fx-min-width: 96px;
+    -fx-min-height: 96px;
+    -fx-max-width: 104px;
+    -fx-max-height: 104px;
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+    -fx-background-radius: 999;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-radius: 999;
+    -fx-alignment: center;
+    -fx-padding: 4;
+}
+
+.profile-avatar-initials {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+}
+
+.brand-mini {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+}
+
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+}
+
+.hero-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+}
+
+.muted-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #53657d;
+}
+
+.dark .muted-label {
+    -fx-text-fill: #b8c4d9;
+}
+
+.metric-number, .score-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+}
+
+.question-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #14253d;
+}
+
+.dark .question-title {
+    -fx-text-fill: #f0f4ff;
+}
+
+.primary-button, .secondary-button, .ghost-button, .toggle-button {
+    -fx-background-radius: 14;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 12 20 12 20;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #ef7f45, #f3a63e);
+    -fx-text-fill: white;
+}
+
+.secondary-button, .toggle-button {
+    -fx-background-color: rgba(17, 61, 98, 0.11);
+    -fx-text-fill: #12304d;
+}
+
+.ghost-button {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(17, 61, 98, 0.18);
+    -fx-border-radius: 14;
+    -fx-text-fill: #12304d;
+}
+
+.dark .secondary-button,
+.dark .toggle-button {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-text-fill: #eef2ff;
+}
+
+.dark .ghost-button {
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-text-fill: #eef2ff;
+}
+
+.button:hover, .toggle-button:hover {
+    -fx-opacity: 0.92;
+    -fx-translate-y: -1;
+}
+
+.text-field, .password-field, .combo-box, .text-area {
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: rgba(17, 61, 98, 0.12);
+    -fx-background-color: rgba(255, 255, 255, 0.98);
+    -fx-padding: 12;
+}
+
+.dark .text-field,
+.dark .password-field,
+.dark .combo-box,
+.dark .text-area {
+    -fx-background-color: rgba(30, 41, 59, 0.95);
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+    -fx-text-fill: #eef2ff;
+    -fx-prompt-text-fill: #9fb0c8;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: rgba(17, 61, 98, 0.08);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(17, 61, 98, 0.08);
+    -fx-background-radius: 14 14 0 0;
+}
+
+.page-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fit-to-width: true;
+}
+
+.page-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.page-scroll .scroll-bar:vertical,
+.page-scroll .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.dark .table-view .column-header-background {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+}
+
+.category-card {
+    -fx-alignment: center-left;
+}
+
+.top-bar, .bottom-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.78);
+}
+
+.dark .top-bar, .dark .bottom-bar {
+    -fx-background-color: rgba(15, 23, 42, 0.72);
+}
+
+.quiz-option {
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(17, 61, 98, 0.06);
+    -fx-background-radius: 16;
+    -fx-padding: 12 14 12 14;
+}
+
+.quiz-option:selected {
+    -fx-background-color: linear-gradient(to right, #2f8f8f, #3b82f6);
+    -fx-text-fill: white;
+}
+
+.timer-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ef7f45;
+}
+
+.login-background-image {
+    -fx-effect: dropshadow(gaussian, rgba(255, 183, 77, 0.28), 28, 0.18, 0, 12);
+}
+
+.dark .login-background-image {
+    -fx-opacity: 0.14;
+}
+
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-border-color: rgba(255, 255, 255, 0.55);
+    -fx-effect: dropshadow(gaussian, rgba(16, 24, 40, 0.12), 24, 0.18, 0, 12);
+}
+
+.dark .login-card {
+    -fx-background-color: rgba(17, 24, 39, 0.72);
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark .profile-avatar-shell {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+}
+
+.result-shell {
+    -fx-background-color: linear-gradient(to bottom right, #f7f9ff, #eef2fb 60%, #eaf6f4);
+}
+
+.dark.result-shell {
+    -fx-background-color: linear-gradient(to bottom right, #111827, #182032 60%, #0f2b2a);
+}

@@ -1,0 +1,31 @@
+question_text,option_a,option_b,option_c,option_d,correct_answer,category,difficulty_level
+Which keyword is used to inherit a class in Java?,implements,extends,inherits,super,Option B,Java Basics,Easy
+Which collection does not allow duplicate elements?,ArrayList,Vector,HashSet,LinkedList,Option C,Java Basics,Medium
+Which method is the entry point of every Java application?,start(),main(),run(),init(),Option B,Java Basics,Easy
+Which access modifier makes a member available only within the same class?,public,protected,private,default,Option C,Java Basics,Easy
+Which wrapper class is used for the primitive type int?,Integer,Int,Number,Long,Option A,Java Basics,Easy
+Which interface is implemented by ArrayList?,Map,Set,List,Queue,Option C,Java Basics,Medium
+Which exception is unchecked in Java?,IOException,SQLException,ClassNotFoundException,NullPointerException,Option D,Java Basics,Hard
+Which SQL command is used to remove all rows from a table but keep the structure?,DELETE,DROP,TRUNCATE,REMOVE,Option C,DBMS,Easy
+Which normal form removes transitive dependency?,1NF,2NF,3NF,BCNF,Option C,DBMS,Medium
+Which SQL clause is used to filter grouped records?,WHERE,ORDER BY,HAVING,GROUP BY,Option C,DBMS,Medium
+Which key uniquely identifies a record in a table?,Foreign Key,Candidate Key,Primary Key,Composite Key,Option C,DBMS,Easy
+Which join returns only matching rows from both tables?,LEFT JOIN,RIGHT JOIN,INNER JOIN,FULL JOIN,Option C,DBMS,Easy
+Which command is used to save changes permanently in a transaction?,SAVEPOINT,COMMIT,ROLLBACK,CLOSE,Option B,DBMS,Easy
+What does ACID stand for in databases?,Atomicity Consistency Isolation Durability,Accuracy Clarity Integrity Dependency,Association Control Isolation Distribution,Access Consistency Index Durability,Atomicity Consistency Isolation Durability,DBMS,Hard
+Which protocol is primarily used to transfer web pages?,FTP,HTTP,SMTP,SSH,Option B,Web Tech,Easy
+Which HTML tag is used to create a hyperlink?,<a>,<link>,<href>,<url>,Option A,Web Tech,Easy
+Which CSS property changes text color?,font-style,background-color,color,text-align,Option C,Web Tech,Easy
+Which JavaScript method converts JSON text into an object?,JSON.stringify(),JSON.convert(),JSON.parse(),JSON.object(),Option C,Web Tech,Medium
+Which HTML tag is used to insert an image?,<image>,<img>,<picture>,<src>,Option B,Web Tech,Easy
+Which CSS layout module is one-dimensional?,Grid,Flexbox,Float,Position,Option B,Web Tech,Medium
+Which symbol is used for an ID selector in CSS?,.,#,@,$,Option B,Web Tech,Easy
+Which JavaScript keyword declares a block-scoped variable?,var,let,define,const,Option B,Web Tech,Easy
+What is the default port number for HTTP?,20,25,80,443,Option C,Networking,Easy
+Which protocol is used to securely transfer files over a network?,HTTP,FTP,SFTP,TELNET,Option C,Networking,Medium
+Which device forwards packets between different networks?,Switch,Router,Hub,Repeater,Option B,Networking,Easy
+What does DNS primarily do?,Encrypt data,Translate domain names to IP addresses,Assign MAC addresses,Measure bandwidth,Translate domain names to IP addresses,Networking,Easy
+Which layer of the OSI model is responsible for routing?,Transport,Session,Network,Physical,Option C,Networking,Medium
+What is the binary value of decimal 10?,1000,1010,1100,1110,Option B,Aptitude,Easy
+If a train travels 60 km in 1.5 hours, what is its average speed?,30 km/h,40 km/h,45 km/h,60 km/h,Option B,Aptitude,Easy
+What is 25 percent of 240?,50,55,60,65,Option C,Aptitude,Easy

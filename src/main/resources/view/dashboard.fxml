@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="com.quizzybee.controller.DashboardController"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="app-shell">
+    <left>
+        <VBox spacing="18.0" prefWidth="260.0" styleClass="sidebar-panel">
+        <BorderPane.margin>
+                <Insets top="1.0" right="3.0" bottom="1.0" left="5.0"/>
+            </BorderPane.margin>
+            <padding>
+                <Insets top="28.0" right="22.0" bottom="28.0" left="22.0"/>
+            </padding>
+            <children>
+                <StackPane styleClass="profile-avatar-shell">
+                    <children>
+                        <ImageView fx:id="profileImageView" fitHeight="92.0" fitWidth="92.0" preserveRatio="false" visible="false" managed="false"/>
+                        <Label fx:id="profileInitialsLabel" styleClass="profile-avatar-initials"/>
+                    </children>
+                </StackPane>
+                <Label text="QuizzyBee" styleClass="brand-title"/>
+                <Label fx:id="welcomeLabel" wrapText="true" styleClass="hero-text"/>
+                <ToggleButton fx:id="darkModeToggle" text="Dark Mode" onAction="#handleDarkModeToggle" styleClass="secondary-button"/>
+                <Button fx:id="adminButton" text="Admin Panel" onAction="#handleOpenAdmin" styleClass="secondary-button"/>
+                <Button text="Logout" onAction="#handleLogout" styleClass="ghost-button"/>
+                <Button text="Settings" onAction="#handleOpenSettings" styleClass="ghost-button"/>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="page-scroll">
+            <content>
+                <VBox spacing="20.0" styleClass="content-wrap">
+                    <padding>
+                        <Insets top="24.0" right="24.0" bottom="24.0" left="24.0"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="18.0">
+                            <children>
+                                <VBox spacing="8.0" HBox.hgrow="ALWAYS" styleClass="metric-card">
+                                    <children>
+                                        <Label text="Total Quizzes Attempted" styleClass="muted-label"/>
+                                        <Label fx:id="attemptCountLabel" styleClass="metric-number"/>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="8.0" HBox.hgrow="ALWAYS" styleClass="metric-card">
+                                    <children>
+                                        <Label text="Last Score" styleClass="muted-label"/>
+                                        <Label fx:id="lastScoreLabel" styleClass="metric-number"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox spacing="18.0">
+                            <children>
+                                <VBox spacing="14.0" HBox.hgrow="ALWAYS" styleClass="content-card">
+                                    <children>
+                                        <Label text="Available Quiz Categories" styleClass="section-title"/>
+                                        <VBox fx:id="categoryContainer" spacing="12.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="14.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <VBox spacing="10.0" styleClass="content-card">
+                                            <children>
+                                                <Label text="Quiz History" styleClass="section-title"/>
+                                                <TableView fx:id="historyTable" prefHeight="240.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="historyCategoryColumn" prefWidth="130.0" text="Category"/>
+                                                        <TableColumn fx:id="historyScoreColumn" prefWidth="90.0" text="Score"/>
+                                                        <TableColumn fx:id="historyDateColumn" prefWidth="180.0" text="Attempted"/>
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="10.0" styleClass="content-card">
+                                            <children>
+                                                <Label text="Leaderboard" styleClass="section-title"/>
+                                                <TableView fx:id="leaderboardTable" prefHeight="240.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="leaderboardRankColumn" prefWidth="65.0" text="Rank"/>
+                                                        <TableColumn fx:id="leaderboardUserIdColumn" prefWidth="100.0" text="Registration ID"/>
+                                                        <TableColumn fx:id="leaderboardUserColumn" prefWidth="120.0" text="User"/>
+                                                        <TableColumn fx:id="leaderboardCategoryColumn" prefWidth="100.0" text="Category"/>
+                                                        <TableColumn fx:id="leaderboardPercentageColumn" prefWidth="100.0" text="Percentage"/>
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

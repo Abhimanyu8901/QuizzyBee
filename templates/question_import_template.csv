@@ -1,0 +1,4 @@
+question_text,option_a,option_b,option_c,option_d,correct_answer,category,difficulty_level
+Which keyword is used to define a subclass in Java?,implements,extends,instanceof,super,Option B,Java Basics,Easy
+Which SQL statement is used to fetch data from a table?,SELECT,INSERT,UPDATE,DELETE,Option A,DBMS,Easy
+Which HTML tag is used to create a hyperlink?,<a>,<link>,<href>,<url>,Option A,Web Tech,Easy

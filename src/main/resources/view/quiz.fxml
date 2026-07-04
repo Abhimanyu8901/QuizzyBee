@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="com.quizzybee.controller.QuizController"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="app-shell">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="top-bar">
+            <padding>
+                <Insets top="18.0" right="24.0" bottom="18.0" left="24.0"/>
+            </padding>
+            <children>
+                <Label text="QuizzyBee" styleClass="brand-mini"/>
+                <Label fx:id="categoryLabel" styleClass="section-title"/>
+                <Label fx:id="questionCounterLabel" styleClass="muted-label"/>
+                <Label fx:id="timerLabel" styleClass="timer-label"/>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="page-scroll">
+            <content>
+                <VBox spacing="18.0" styleClass="content-wrap">
+                    <padding>
+                        <Insets top="28.0" right="28.0" bottom="28.0" left="28.0"/>
+                    </padding>
+                    <children>
+                        <ProgressBar fx:id="quizProgressBar" prefWidth="900.0"/>
+                        <VBox spacing="16.0" styleClass="content-card">
+                            <children>
+                                <Label fx:id="questionLabel" wrapText="true" styleClass="question-title"/>
+                                <RadioButton fx:id="optionOneRadio" wrapText="true" styleClass="quiz-option"/>
+                                <RadioButton fx:id="optionTwoRadio" wrapText="true" styleClass="quiz-option"/>
+                                <RadioButton fx:id="optionThreeRadio" wrapText="true" styleClass="quiz-option"/>
+                                <RadioButton fx:id="optionFourRadio" wrapText="true" styleClass="quiz-option"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="12.0" styleClass="bottom-bar">
+            <padding>
+                <Insets top="14.0" right="24.0" bottom="14.0" left="24.0"/>
+            </padding>
+            <children>
+                <Button text="Previous" onAction="#handlePrevious" styleClass="secondary-button"/>
+                <Button text="Next" onAction="#handleNext" styleClass="secondary-button"/>
+                <Button text="Submit Quiz" onAction="#handleSubmit" styleClass="primary-button"/>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

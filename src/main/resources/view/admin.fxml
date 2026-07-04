@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="com.quizzybee.controller.AdminController"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="app-shell">
+    <left>
+        <VBox spacing="18.0" prefWidth="260.0" minWidth="210.0" styleClass="sidebar-panel">
+            <BorderPane.margin>
+                <Insets top="26.0" right="1.0" bottom="26.0" left="10.0"/>
+            </BorderPane.margin>
+            <padding>
+                <Insets top="25.0" right="20.0" bottom="24.0" left="20.0"/>
+            </padding>
+            <children>
+                <StackPane styleClass="profile-avatar-shell">
+                    <children>
+                        <ImageView fx:id="profileImageView" fitHeight="90.0" fitWidth="90.0" preserveRatio="false" visible="false" managed="false"/>
+                        <Label fx:id="profileInitialsLabel" styleClass="profile-avatar-initials"/>
+                    </children>
+                </StackPane>
+                <Label text="Admin Panel" styleClass="brand-title"/>
+                <Label text="Manage categories, question bank, and learner performance." wrapText="true" styleClass="hero-text"/>
+                <Button text="Back to Dashboard" onAction="#handleBackToDashboard" styleClass="secondary-button"/>
+                <Button text="Logout" onAction="#handleLogout" styleClass="ghost-button"/>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <StackPane>
+            <children>
+                <ImageView fitWidth="1019.0" fitHeight="700.0" mouseTransparent="true" opacity="0.90"
+                           pickOnBounds="false" preserveRatio="false" smooth="true">
+                    <image>
+                        <Image url="@assets/result-bg.jpg"/>
+                    </image>
+                </ImageView>
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="page-scroll">
+                    <content>
+                        <VBox spacing="18.0" styleClass="content-wrap">
+                            <padding>
+                                <Insets top="32.0" right="22.0" bottom="22.0" left="22.0"/>
+                            </padding>
+                            <children>
+                                <HBox spacing="18.0">
+                                    <children>
+                                        <VBox spacing="12.0" prefWidth="460.0" styleClass="content-card">
+                                            <children>
+                                                <Label text="Question Form" styleClass="section-title"/>
+                                                <TextArea fx:id="questionTextArea" prefRowCount="3" promptText="Question text"/>
+                                                <TextField fx:id="optionAField" promptText="Option A"/>
+                                                <TextField fx:id="optionBField" promptText="Option B"/>
+                                                <TextField fx:id="optionCField" promptText="Option C"/>
+                                                <TextField fx:id="optionDField" promptText="Option D"/>
+                                                <ComboBox fx:id="correctAnswerBox" promptText="Correct answer"/>
+                                                <ComboBox fx:id="categoryBox" promptText="Category"/>
+                                                <ComboBox fx:id="difficultyBox" promptText="Difficulty"/>
+                                                <FlowPane hgap="10.0" vgap="10.0" prefWrapLength="320.0">
+                                                    <children>
+                                                        <Button text="Add Question" prefWidth="150.0" onAction="#handleAddQuestion" styleClass="primary-button"/>
+                                                        <Button text="Update Question" prefWidth="150.0" onAction="#handleUpdateQuestion" styleClass="secondary-button"/>
+                                                        <Button text="Delete Question" prefWidth="150.0" onAction="#handleDeleteQuestion" styleClass="ghost-button"/>
+                                                        <Button text="Import Excel" prefWidth="150.0" onAction="#handleImportQuestions" styleClass="secondary-button"/>
+                                                    </children>
+                                                </FlowPane>
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="12.0" prefWidth="580.0" styleClass="content-card">
+                                            <children>
+                                                <Label text="Question Bank" styleClass="section-title"/>
+                                                <TableView fx:id="questionTable" prefHeight="280.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="questionSelectColumn" prefWidth="70.0" text="Select"/>
+                                                        <TableColumn fx:id="questionIdColumn" prefWidth="70.0" text="ID"/>
+                                                        <TableColumn fx:id="questionCategoryColumn" prefWidth="170.0" text="Category"/>
+                                                        <TableColumn fx:id="questionDifficultyColumn" prefWidth="140.0" text="Difficulty"/>
+                                                    </columns>
+                                                </TableView>
+                                                <HBox spacing="10.0">
+                                                    <children>
+                                                        <Button text="Export Excel" prefWidth="150.0" onAction="#handleExportQuestions" styleClass="secondary-button"/>
+                                                        <Button text="Set Timer" prefWidth="150.0" onAction="#handleSetCategoryTimer" styleClass="ghost-button"/>
+                                                        <Button text="Delete Selected" prefWidth="150.0" onAction="#handleDeleteSelectedQuestions" styleClass="ghost-button"/>
+                                                    </children>
+                                                </HBox>
+                                                <HBox spacing="10.0">
+                                                    <children>
+                                                        <Label text="Category Difficulty Summary" styleClass="section-title"/>
+                                                        <TextField fx:id="categorySearchField" promptText="Search category"/>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="categorySummaryTable" prefHeight="220.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="summarySelectColumn" prefWidth="70.0" text="Select"/>
+                                                        <TableColumn fx:id="summarySerialColumn" prefWidth="70.0" text="S.No"/>
+                                                        <TableColumn fx:id="summaryCategoryColumn" prefWidth="140.0" text="Category"/>
+                                                        <TableColumn fx:id="summaryEasyColumn" prefWidth="80.0" text="Easy"/>
+                                                        <TableColumn fx:id="summaryMediumColumn" prefWidth="90.0" text="Medium"/>
+                                                        <TableColumn fx:id="summaryHardColumn" prefWidth="80.0" text="Hard"/>
+                                                        <TableColumn fx:id="summaryTotalColumn" prefWidth="80.0" text="Total"/>
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="18.0">
+                                    <children>
+                                        <VBox spacing="12.0" prefWidth="460.0" styleClass="content-card">
+                                            <children>
+                                                <Label text="Create Category" styleClass="section-title"/>
+                                                <TextField fx:id="categoryNameField" promptText="Category name"/>
+                                                <TextField fx:id="categoryDescriptionField" promptText="Category description"/>
+                                                <Button text="Create Category" onAction="#handleCreateCategory" styleClass="primary-button"/>
+                                                <Button text="Delete Selected Categories" onAction="#handleDeleteSelectedCategories" styleClass="ghost-button"/>
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="12.0" prefWidth="720.0" styleClass="content-card">
+                                            <children>
+                                                <HBox spacing="10.0">
+                                                    <children>
+                                                        <Label text="User Scores" styleClass="section-title"/>
+                                                        <TextField fx:id="scoreSearchField" promptText="Search user/category"/>
+                                                        <Button text="Delete Checked Rows" onAction="#handleDeleteSelectedScores" styleClass="ghost-button"/>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="scoresTable" prefHeight="220.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="scoreSelectColumn" prefWidth="70.0" text="Select"/>
+                                                        <TableColumn fx:id="scoreUserColumn" prefWidth="150.0" text="User"/>
+                                                        <TableColumn fx:id="scoreCategoryColumn" prefWidth="120.0" text="Category"/>
+                                                        <TableColumn fx:id="scoreValueColumn" prefWidth="80.0" text="Score"/>
+                                                        <TableColumn fx:id="scorePercentageColumn" prefWidth="90.0" text="Percentage"/>
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
