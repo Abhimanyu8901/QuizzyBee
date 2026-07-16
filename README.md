@@ -24,15 +24,7 @@ QuizzyBee is a Java-based interactive quiz system built with JavaFX, Core Java, 
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
-
-## Quiz Screen
-
-![Quiz](screenshots/quiz.png)
-
-## Result Screen
-
-![Result](screenshots/result.png)
+![Dashboard](screenshots/Admin_Panel_1.png)
 
 ## Project Structure
 
