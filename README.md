@@ -40,7 +40,7 @@ QuizzyBee is a Java-based interactive quiz system built with JavaFX, Core Java, 
 
 ## User_Dashboard
 
-![User](screenshots/User_Dashboard.png)
+![User](screenshots/User_Dahsboard.png)
 
 ## Quiz_Interface
 
