@@ -16,6 +16,24 @@ QuizzyBee is a Java-based interactive quiz system built with JavaFX, Core Java, 
 - Dark mode toggle
 - Simple sound feedback for correct answers
 
+# Screenshots
+
+## Login Page
+
+![Login](screenshots/Login_Dashboard.png)
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+## Quiz Screen
+
+![Quiz](screenshots/quiz.png)
+
+## Result Screen
+
+![Result](screenshots/result.png)
+
 ## Project Structure
 
 ```text
